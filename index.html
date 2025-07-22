@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Asset Deployment</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f7f7f7; }
+    .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; }
+    .checkbox-group, .radio-group { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .checkbox-group label, .radio-group label { font-weight: normal; }
+    .btn { padding: 10px 20px; margin-top: 20px; background: #0052cc; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>Engineer Deployment Form</h1>
+
+  <!-- Device Info -->
+  <div class="section">
+    <h2>Device Info</h2>
+    <label>LAN MAC Address</label>
+    <input type="text" value="D0460C871820">
+
+    <label>WiFi MAC Address</label>
+    <input type="text" value="NA">
+
+    <label>SR No</label>
+    <input type="text" value="SE1137037">
+
+    <label>Encryption Type</label>
+    <input type="text" value="BitLocker">
+
+    <label>Remarks</label>
+    <input type="text" value="User tested ok">
+  </div>
+
+  <!-- Hardware Details -->
+  <div class="section">
+    <h2>Hardware Specs</h2>
+    <label>Model</label>
+    <input type="text" value="OptiPlex Plus Micro">
+
+    <label>Processor</label>
+    <input type="text" value="i5-14500T">
+
+    <label>Memory</label>
+    <input type="text" value="16GB">
+
+    <label>Storage</label>
+    <input type="text" value="512GB SSD">
+
+    <label>Graphics</label>
+    <input type="text" value="Intel UHD Graphics 770">
+  </div>
+
+  <!-- Location -->
+  <div class="section">
+    <h2>Location</h2>
+    <label>Campus</label>
+    <input type="text" value="SKH Campus">
+
+    <label>Block</label>
+    <input type="text" value="SKMC">
+
+    <label>Level</label>
+    <input type="text" value="Level 02">
+
+    <label>Room</label>
+    <input type="text" value="DOR Wall">
+  </div>
+
+  <!-- Checklist -->
+  <div class="section">
+    <h2>Engineer Checklist</h2>
+    <div>
+      <label>Device and Accessories Working</label>
+      <div class="radio-group">
+        <label><input type="radio" name="working" checked> Pass</label>
+        <label><input type="radio" name="working"> Fail</label>
+        <label><input type="radio" name="working"> N/A</label>
+      </div>
+
+      <label>BitLocker Encrypted</label>
+      <div class="radio-group">
+        <label><input type="radio" name="bitlocker" checked> Pass</label>
+        <label><input type="radio" name="bitlocker"> Fail</label>
+        <label><input type="radio" name="bitlocker"> N/A</label>
+      </div>
+
+      <!-- Add other checklist items similarly -->
+    </div>
+  </div>
+
+  <!-- Accessories -->
+  <div class="section">
+    <h2>Accessories</h2>
+    <div class="checkbox-group">
+      <label><input type="checkbox" checked> Power Cord</label>
+      <label><input type="checkbox" checked> AC Adapter</label>
+      <label><input type="checkbox"> Keyboard and Mouse</label>
+      <label><input type="checkbox"> Cable Lock</label>
+      <label><input type="checkbox"> Mounting Bracket</label>
+    </div>
+  </div>
+
+  <!-- Ownership -->
+  <div class="section">
+    <h2>Ownership and Acceptance</h2>
+    <label>Owner Name</label>
+    <input type="text" value="Victor Cheong Kai Jie">
+
+    <label>Owner Email</label>
+    <input type="email" value="victor.cheong.kj@skh.com.sg">
+
+    <label>Deployed By</label>
+    <input type="text" value="Muhammad Zaki Bin Muhammad Ayub">
+  </div>
+
+  <!-- Submit -->
+  <div>
+    <button class="btn" onclick="alert('Form submitted')">Submit</button>
+  </div>
+
+</body>
+</html>
