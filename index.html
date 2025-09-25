@@ -25,6 +25,11 @@
     th {
       background-color: #ecf0f1;
     }
+    input[type="text"], select {
+      width: 95%;
+      padding: 6px;
+      font-size: 14px;
+    }
     .pass {
       color: green;
       font-weight: bold;
@@ -33,62 +38,83 @@
       color: red;
       font-weight: bold;
     }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-  <h1>potatoman adventures</h1>
+  <h1>Potatoman Adventures</h1>
   <h2>Asset Deployment Summary</h2>
 
   <table>
-    <tr><th>Asset Number</th><td></td></tr>
-    <tr><th>Device Name</th><td></td></tr>
-    <tr><th>Processor</th><td></td></tr>
-    <tr><th>Memory</th><td></td></tr>
-    <tr><th>Storage</th><td></td></tr>
-    <tr><th>Graphics</th><td></td></tr>
-    <tr><th>LAN MAC Address</th><td></td></tr>
-    <tr><th>WiFi MAC Address</th><td></td></tr>
-    <tr><th>Encryption</th><td></td></tr>
-    <tr><th>Software Type</th><td></td></tr>
-    <tr><th>Asset Function</th><td></td></tr>
-    <tr><th>Classification</th><td></td></tr>
-    <tr><th>Location</th><td></td></tr>
-    <tr><th>Location Remarks</th><td></td></tr>
+    <tr><th>Asset Number</th><td><input type="text" name="assetNumber"></td></tr>
+    <tr><th>Device Name</th><td><input type="text" name="deviceName"></td></tr>
+    <tr><th>Processor</th><td><input type="text" name="processor"></td></tr>
+    <tr><th>Memory</th><td><input type="text" name="memory"></td></tr>
+    <tr><th>Storage</th><td><input type="text" name="storage"></td></tr>
+    <tr><th>Graphics</th><td><input type="text" name="graphics"></td></tr>
+    <tr><th>LAN MAC Address</th><td><input type="text" name="lanMac"></td></tr>
+    <tr><th>WiFi MAC Address</th><td><input type="text" name="wifiMac"></td></tr>
+    <tr><th>Encryption</th><td><input type="text" name="encryption"></td></tr>
+    <tr><th>Software Type</th><td><input type="text" name="softwareType"></td></tr>
+    <tr><th>Asset Function</th><td><input type="text" name="assetFunction"></td></tr>
+    <tr><th>Classification</th><td><input type="text" name="classification"></td></tr>
+    <tr><th>Location</th><td><input type="text" name="location"></td></tr>
+    <tr><th>Location Remarks</th><td><input type="text" name="locationRemarks"></td></tr>
   </table>
 
   <h2>Engineer Checklist</h2>
   <table>
     <tr><th>Task</th><th>Status</th></tr>
-    <tr><td>Device & accessories working</td><td class="pass">Pass</td></tr>
-    <tr><td>Lost & Found Sticker applied</td><td class="pass">Pass</td></tr>
-    <tr><td>Base OS installed</td><td class="pass">Pass</td></tr>
-    <tr><td>Latest patch applied</td><td class="pass">Pass</td></tr>
-    <tr><td>Hostname applied</td><td class="pass">Pass</td></tr>
-    <tr><td>Group Policy (GPO)</td><td class="pass">Pass</td></tr>
-    <tr><td>BIOS configured</td><td class="pass">Pass</td></tr>
-    <tr><td>ServiceNow updated</td><td class="pass">Pass</td></tr>
-    <tr><td>BitLocker 100%</td><td class="fail">Fail</td></tr>
+    <tr><td>Device & accessories working</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>Lost & Found Sticker applied</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>Base OS installed</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>Latest patch applied</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>Hostname applied</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>Group Policy (GPO)</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>BIOS configured</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>ServiceNow updated</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
+    <tr><td>BitLocker 100%</td><td><select><option>Pass</option><option>Fail</option></select></td></tr>
   </table>
 
   <h2>Accessories</h2>
   <ul>
-    <li>Keyboard and Mouse</li>
-    <li>Power Cord ✅</li>
-    <li>AC Adapter</li>
-    <li>Cable Lock</li>
-    <li>Mounting Bracket</li>
+    <li><input type="checkbox"> Keyboard and Mouse</li>
+    <li><input type="checkbox" checked> Power Cord</li>
+    <li><input type="checkbox"> AC Adapter</li>
+    <li><input type="checkbox"> Cable Lock</li>
+    <li><input type="checkbox"> Mounting Bracket</li>
   </ul>
 
   <h2>Ownership & Acceptance</h2>
   <table>
-    <tr><th>Owner Name</th><td></td></tr>
-    <tr><th>Owner Email</th><td></td></tr>
-    <tr><th>Acceptor Name</th><td></td></tr>
-    <tr><th>Acceptor Email</th><td></td></tr>
-    <tr><th>Deployed By</th><td></td></tr>
-    <tr><th>Deployment Email</th><td></td></tr>
+    <tr><th>Owner Name</th><td><input type="text" name="ownerName"></td></tr>
+    <tr><th>Owner Email</th><td><input type="text" name="ownerEmail"></td></tr>
+    <tr><th>Acceptor Name</th><td><input type="text" name="acceptorName"></td></tr>
+    <tr><th>Acceptor Email</th><td><input type="text" name="acceptorEmail"></td></tr>
+    <tr><th>Deployed By</th><td><input type="text" name="deployedBy"></td></tr>
+    <tr><th>Deployment Email</th><td><input type="text" name="deploymentEmail"></td></tr>
   </table>
+
+  <button onclick="window.print()">Print Summary</button>
+  <button onclick="exportData()">Export to Console</button>
+
+  <script>
+    function exportData() {
+      const inputs = document.querySelectorAll('input[type="text"]');
+      const data = {};
+      inputs.forEach(input => {
+        data[input.name] = input.value;
+      });
+      console.log("Exported Data:", data);
+      alert("Data exported to console.");
+    }
+  </script>
 
 </body>
 </html>
